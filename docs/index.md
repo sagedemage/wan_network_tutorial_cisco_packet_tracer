@@ -16,7 +16,7 @@ Switch:
 
 PC:
 - PC Model Name: PC-PT
-- Quantity: 2
+- Quantity: 4
 
 ## Configure IP Addresses
 **IP Addressing Table For PCs**:
@@ -26,7 +26,17 @@ PC0:
 - Default Gateway: 192.168.1.1
 
 PC1:
+- IPv4 Address: 192.168.1.3
+- Subnet Mask: 255.255.255.0
+- Default Gateway: 192.168.1.1
+
+PC2:
 - IPv4 Address: 192.168.2.2
+- Subnet Mask: 255.255.255.0
+- Default Gateway: 192.168.2.1
+
+PC3:
+- IPv4 Address: 192.168.2.3
 - Subnet Mask: 255.255.255.0
 - Default Gateway: 192.168.2.1
 
@@ -39,7 +49,7 @@ Router1:
 - Serial2/0: 10.1.1.2 255.255.255.0
 - FastEthernet0/0: 192.168.2.1 255.255.255.0
 
-Configure the IP addresses for the two PCs.
+Configure the IP addresses for the four PCs.
 
 PC0:
 ```
@@ -48,7 +58,17 @@ ipconfig 192.168.1.2  255.255.255.0 192.168.1.1
 
 PC1:
 ```
+ipconfig 192.168.1.3  255.255.255.0 192.168.1.1
+```
+
+PC2:
+```
 ipconfig 192.168.2.2  255.255.255.0 192.168.2.1
+```
+
+PC3:
+```
+ipconfig 192.168.2.3  255.255.255.0 192.168.2.1
 ```
 
 Configure the IP addresses for the two routers.
@@ -89,19 +109,77 @@ Router(config)#ip route 192.168.1.0 255.255.255.0 10.1.1.1
 ```
 
 ## Check Connectivity Between PCs
-Ping each PC to check if the two PCs can communicate with each other. Go to Desktop -> Command Prompt.
+Ping each PC to check if the four PCs can communicate with each other.
 
-PC0:
+Ping PCs from PC0
+
+PC0 -> PC1:
+```
+ping 192.168.1.3
+```
+
+PC0 -> PC2:
 ```
 ping 192.168.2.2
 ```
 
-PC1:
+PC0 -> PC3:
+```
+ping 192.168.2.3
+```
+
+Ping PCs from PC1
+
+PC1 -> PC0:
 ```
 ping 192.168.1.2
 ```
 
-Both of them should work. Congratulations, you setup a WAN network. 
+PC1 -> PC2:
+```
+ping 192.168.2.2
+```
+
+PC1 -> PC3:
+```
+ping 192.168.2.3
+```
+
+Ping PCs from PC2
+
+PC2 -> PC3:
+```
+ping 192.168.2.3
+```
+
+PC2 -> PC0:
+```
+ping 192.168.1.2
+```
+
+PC2 -> PC1:
+```
+ping 192.168.1.3
+```
+
+Ping PCs from PC3
+
+PC3 -> PC2:
+```
+ping 192.168.2.2
+```
+
+PC3 -> PC0:
+```
+ping 192.168.1.2
+```
+
+PC3 -> PC1:
+```
+ping 192.168.1.3
+```
+
+These should work. Congratulations, you setup a WAN network.
 
 ## Resources
 - [Implementation of Static Routing in Cisco - 2 Router Connections](https://www.geeksforgeeks.org/computer-networks/implementation-of-static-routing-in-cisco-2-router-connections/)
