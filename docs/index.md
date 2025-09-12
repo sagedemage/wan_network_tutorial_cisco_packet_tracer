@@ -41,13 +41,18 @@ PC3:
 - Default Gateway: 192.168.2.1
 
 **IP addressing Table For Routers**:
+
 Router0:
-- Serial2/0: 10.1.1.1 255.255.255.0
-- FastEthernet0/0: 192.168.1.1 255.255.255.0
+- Serial2/0: 10.1.1.1
+    - Subnet Mask: 255.255.255.0
+- FastEthernet0/0: 192.168.1.1
+    - Subnet Mask: 255.255.255.0
 
 Router1:
-- Serial2/0: 10.1.1.2 255.255.255.0
-- FastEthernet0/0: 192.168.2.1 255.255.255.0
+- Serial2/0: 10.1.1.2
+    - Subnet Mask: 255.255.255.0
+- FastEthernet0/0: 192.168.2.1
+    - Subnet Mask: 255.255.255.0
 
 Configure the IP addresses for the four PCs.
 
@@ -179,7 +184,9 @@ PC3 -> PC1:
 ping 192.168.1.3
 ```
 
-These should work. Congratulations, you setup a WAN network.
+These should work.
+
+Congratulations, you setup a WAN network!
 
 ## Resources
 - [Implementation of Static Routing in Cisco - 2 Router Connections](https://www.geeksforgeeks.org/computer-networks/implementation-of-static-routing-in-cisco-2-router-connections/)
