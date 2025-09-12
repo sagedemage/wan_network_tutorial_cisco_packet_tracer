@@ -19,6 +19,7 @@ PC:
 - Quantity: 4
 
 ## Configure IP Addresses
+
 **IP Addressing Table For PCs**:
 PC0:
 - IPv4 Address: 192.168.1.2
@@ -96,7 +97,8 @@ Router(config-if)#ip add 192.168.2.1 255.255.255.0
 Router(config-if)#no shut
 ```
 
-## Configure Routing 
+## Configure Routing
+
 Configure static routes for the two routers in order for the PCs to communicate with each other.
 
 Router0:
@@ -114,6 +116,7 @@ Router(config)#ip route 192.168.1.0 255.255.255.0 10.1.1.1
 ```
 
 ## Check Connectivity Between PCs
+
 Ping each PC to check if the four PCs can communicate with each other.
 
 Ping PCs from PC0
@@ -189,4 +192,5 @@ These should work.
 Congratulations, you setup a WAN network!
 
 ## Resources
+
 - [Implementation of Static Routing in Cisco - 2 Router Connections](https://www.geeksforgeeks.org/computer-networks/implementation-of-static-routing-in-cisco-2-router-connections/)
