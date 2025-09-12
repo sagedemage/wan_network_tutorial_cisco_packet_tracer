@@ -5,12 +5,15 @@ This is a guide to implement a WAN network in Cisco Packet Tracer.
 ![](./images/WAN_Network-Cisco_Packet_Tracer.PNG)
 
 ## Devices
+
 Router:
 - Router Model Name: Router-PT
 - Quantity: 2
+
 Switch:
 - Switch Model Name: Switch-PT
 - Quantity: 2
+
 PC:
 - PC Model Name: PC-PT
 - Quantity: 2
