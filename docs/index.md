@@ -20,7 +20,7 @@ PC:
 
 ## Configure IP Addresses
 
-**IP Addressing Table For PCs**:
+**IP Address Table for PCs**:
 
 PC0:
 - IPv4 Address: 192.168.1.2
@@ -42,7 +42,7 @@ PC3:
 - Subnet Mask: 255.255.255.0
 - Default Gateway: 192.168.2.1
 
-**IP addressing Table For Routers**:
+**IP Address Table for Routers**:
 
 Router0:
 - Serial2/0: 10.1.1.1
@@ -55,6 +55,8 @@ Router1:
     - Subnet Mask: 255.255.255.0
 - FastEthernet0/0: 192.168.2.1
     - Subnet Mask: 255.255.255.0
+
+### Configure IP Addresses for the PCs
 
 Configure the IP addresses for the four PCs.
 
@@ -78,14 +80,19 @@ PC3:
 ipconfig 192.168.2.3  255.255.255.0 192.168.2.1
 ```
 
-Configure the IP addresses for the two routers.
+### Configure IP Addresses for the Routers
+
+Configure the IP addresses for the two routers. You have to configure the
+ip address for the FastEthernet0/0 and Serial2/0 ports for each router.
+
+**FastEthernet0/0**
 
 Router0:
 ```
-Router>en  
-Router#config t 
+Router>en
+Router#config t
 Router(config)#int FastEthernet0/0
-Router(config-if)#ip add 192.168.1.1 255.255.255.0  
+Router(config-if)#ip add 192.168.1.1 255.255.255.0
 Router(config-if)#no shut
 ```
 
@@ -95,6 +102,26 @@ Router>en
 Router#config t 
 Router(config)#int FastEthernet0/0
 Router(config-if)#ip add 192.168.2.1 255.255.255.0  
+Router(config-if)#no shut
+```
+
+**Serial2/0**
+
+Router0:
+```
+Router>en
+Router#config t
+Router(config)#int Serial2/0
+Router(config-if)#ip add 10.1.1.1 255.255.255.0
+Router(config-if)#no shut
+```
+
+Router1:
+```
+Router>en
+Router#config t
+Router(config)#int Serial2/0
+Router(config-if)#ip add 10.1.1.2 255.255.255.0
 Router(config-if)#no shut
 ```
 
