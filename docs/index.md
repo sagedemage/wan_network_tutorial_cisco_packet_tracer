@@ -21,6 +21,7 @@ PC:
 ## Configure IP Addresses
 
 **IP Addressing Table For PCs**:
+
 PC0:
 - IPv4 Address: 192.168.1.2
 - Subnet Mask: 255.255.255.0
