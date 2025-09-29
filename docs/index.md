@@ -20,7 +20,7 @@ PC:
 
 ## Configure IP Addresses
 
-**IP Address Table for PCs**:
+### IP Address Table for PCs
 
 PC0:
 - IPv4 Address: 192.168.1.2
@@ -42,7 +42,7 @@ PC3:
 - Subnet Mask: 255.255.255.0
 - Default Gateway: 192.168.2.1
 
-**IP Address Table for Routers**:
+### IP Address Table for Routers:
 
 Router0:
 - Serial2/0: 10.1.1.1
@@ -58,27 +58,9 @@ Router1:
 
 ### Configure IP Addresses for the PCs
 
-Configure the IP addresses for the four PCs.
-
-PC0:
-```
-ipconfig 192.168.1.2  255.255.255.0 192.168.1.1
-```
-
-PC1:
-```
-ipconfig 192.168.1.3  255.255.255.0 192.168.1.1
-```
-
-PC2:
-```
-ipconfig 192.168.2.2  255.255.255.0 192.168.2.1
-```
-
-PC3:
-```
-ipconfig 192.168.2.3  255.255.255.0 192.168.2.1
-```
+Go to Desktop -> IP Configuration. Set the **IPv4 Address**, and **Default Gateway**
+for each PC. Make sure the IP addresses of the PCs matches with the information at
+the *IP Address Table for PCs* section.
 
 ### Configure IP Addresses for the Routers
 
