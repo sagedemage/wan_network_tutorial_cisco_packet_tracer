@@ -53,7 +53,10 @@ Router3:
     - Subnet Mask: 255.255.255.0
 ### Configure IP Addresses for the PCs
 
-Go to Desktop -> IP Configuration. Set the **IPv4 Address**, and **Default Gateway** for each PC. Make sure the IP addresses of the PCs matches with the information at the *IP Address Table for PCs* section.
+Go to Desktop -> IP Configuration. Set the **IPv4 Address**, and **Default Gateway** for each PC.
+Make sure the IP addresses of the PCs matches with the information at the *IP Address Table for PCs*
+section.
+
 ### Configure IP Addresses for the Routers
 
 **FastEthernet0/0**
