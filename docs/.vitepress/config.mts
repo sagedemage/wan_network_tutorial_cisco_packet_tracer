@@ -9,6 +9,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Branch Network', link: '/tutorials/branch_network.html' },
     ],
 
     socialLinks: [
