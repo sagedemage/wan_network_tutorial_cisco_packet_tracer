@@ -10,6 +10,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Branch Network', link: '/tutorials/branch_network.html' },
+      { text: 'OSPF Single Area Network', link: '/tutorials/ospf_single_area_network.html' },
     ],
 
     socialLinks: [
