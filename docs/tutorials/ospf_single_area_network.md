@@ -160,5 +160,6 @@ Router(config-router)#network 20.0.0.0 0.0.0.255 area 0
 Router(config-router)#network 192.168.3.0 0.255.255.255 area 0
 Router(config-router)#exit
 ```
+
 ## Resources:
 - [OSPF Implementation - GeeksforGeeks](https://www.geeksforgeeks.org/computer-networks/ospf-implementation/)
